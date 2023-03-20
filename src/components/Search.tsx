@@ -1,8 +1,8 @@
+import React from 'react'
 import styled from "styled-components";
-
 import { IoSearch } from "react-icons/io5";
 import { useDispatch, useSelector } from "react-redux";
-import { selectSearch, setSearch } from "../store/slices/controlSlice";
+import { selectSearch, setSearch } from "../store/slices/controlsSlice";
 
 const InputContainer = styled.label`
 	background-color: var(--colors-ui-base);
@@ -31,7 +31,7 @@ const Input = styled.input.attrs({
 	color: var(--color-text);
 	background-color: var(--colors-ui-base);
 `;
-type onSearch = ChangeEventHandler<HTMLInputElement>;
+type onSearch = React.ChangeEventHandler<HTMLInputElement>;
 
 const Search: React.FC = () => {
 	const dispatch = useDispatch();

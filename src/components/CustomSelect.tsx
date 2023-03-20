@@ -14,7 +14,7 @@ const MySelect = (props: Props<CountryOption, false>) => {
 	return <Select {...props} />;
 };
 
-const CustomSelect: React.FC = styled(MySelect).attrs({
+const CustomSelect = styled(MySelect).attrs({
 	styles: {
 		control: (provided: CSSObjectWithLabel) => ({
 			...provided,

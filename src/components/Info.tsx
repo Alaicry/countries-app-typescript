@@ -1,10 +1,10 @@
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
-import { useDispatch } from "react-redux";
 import { NavigateFunction } from "react-router-dom";
 import styled from "styled-components";
-import { loadingNeighboursByBorder } from "../store/details/detailsActions";
-import { selectNeighbours } from "../store/details/detailSelectors";
+import { useAppDispatch } from "../store";
+import { loadNeighboursByBorder, selectNeighbours } from "../store/slices/detailsSlice";
+
 import { Country } from "../types";
 
 const Wrapper = styled.section`
@@ -113,13 +113,13 @@ const Info: React.FC<IInfoProps> = (props) => {
 		push,
 	} = props;
 
-	const dispatch = useDispatch();
+	const dispatch = useAppDispatch();
 
 	const neighbours = useSelector(selectNeighbours);
 
 	useEffect(() => {
 		if (borders.length) {
-			dispatch(loadingNeighboursByBorder(borders));
+			dispatch(loadNeighboursByBorder(borders));
 		}
 	}, [borders, dispatch]);
 

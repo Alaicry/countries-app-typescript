@@ -2,13 +2,15 @@ import { configureStore } from "@reduxjs/toolkit";
 import axios from "axios";
 import { useDispatch } from "react-redux";
 import * as api from "../utils/config";
-import controlSlice from "./slices/controlSlice";
+import controlsSlice from "./slices/controlsSlice";
 import countrySlice from "./slices/countrySlice";
+import detailsSlice from "./slices/detailsSlice";
 
 const store = configureStore({
 	reducer: {
 		countries: countrySlice,
-		controls: controlSlice,
+		controls: controlsSlice,
+		details: detailsSlice,
 	},
 	devTools: true,
 	middleware: (getDefaultMiddleware) =>
