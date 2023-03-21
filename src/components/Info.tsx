@@ -4,7 +4,6 @@ import { NavigateFunction } from "react-router-dom";
 import styled from "styled-components";
 import { useAppDispatch } from "../store";
 import { loadNeighboursByBorder, selectNeighbours } from "../store/slices/detailsSlice";
-
 import { Country } from "../types";
 
 const Wrapper = styled.section`

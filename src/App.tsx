@@ -5,6 +5,8 @@ import Main from "./components/Main";
 import HomePage from "./pages/HomePage";
 import { useAppDispatch } from "./store";
 import { getCountries } from "./store/slices/countrySlice";
+import DetailsPage from "./pages/DetailsPage";
+
 
 const App: React.FC = () => {
 	const dispatch = useAppDispatch();
@@ -18,8 +20,8 @@ const App: React.FC = () => {
 			<Main>
 				<Routes>
 					<Route path="/" element={<HomePage />} />
-					{/* <Route path="/country/:name" element={<Details />} />
-					<Route path="*" element={<NotFound />} /> */}
+					<Route path="/country/:name" element={<DetailsPage />} />
+					{/* <Route path="*" element={<NotFound />} />  */}
 				</Routes>
 			</Main>
 		</React.Fragment>
