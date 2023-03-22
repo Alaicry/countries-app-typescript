@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Search from "./Search";
 import CustomSelect from "./CustomSelect";
 import { useRegion } from "../utils/hooks/useRegion";
-import { options, optionsMap } from "../utils/constants";
+import { options, optionsMap } from "../utils/constants/regions";
 
 const Wrapper = styled.div`
 	display: flex;

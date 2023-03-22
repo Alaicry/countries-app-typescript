@@ -1,7 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 import axios from "axios";
 import { useDispatch } from "react-redux";
-import * as api from "../utils/config";
+import * as api from "../utils/constants/api";
 import controlsSlice from "./slices/controlsSlice";
 import countrySlice from "./slices/countrySlice";
 import detailsSlice from "./slices/detailsSlice";

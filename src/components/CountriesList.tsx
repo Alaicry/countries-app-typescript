@@ -1,5 +1,4 @@
 import React from "react";
-
 import { useNavigate } from "react-router-dom";
 import { CountryInfo } from "../types";
 import { useCountries } from "../utils/hooks/useCountries";

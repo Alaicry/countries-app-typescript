@@ -12,4 +12,3 @@ export const optionsMap: RegionOption = {
 	Oceania: { value: "Oceania", label: "Oceania" },
 };
 export const options = Object.values(optionsMap);
-

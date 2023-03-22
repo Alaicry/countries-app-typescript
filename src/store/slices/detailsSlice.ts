@@ -64,6 +64,12 @@ const detailsSlice = createSlice({
 				state.status = Status.RECEIVED;
 				state.currentCountry = action.payload.data[0];
 			})
+			.addCase(loadNeighboursByBorder.pending, (state) => {
+				state.neighbours = [];
+			})
+			.addCase(loadNeighboursByBorder.rejected, (state) => {
+				state.neighbours = [];
+			})
 			.addCase(loadNeighboursByBorder.fulfilled, (state, action) => {
 				state.neighbours = action.payload.data.map((country) => country.name);
 			});

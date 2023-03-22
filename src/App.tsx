@@ -6,14 +6,9 @@ import HomePage from "./pages/HomePage";
 import { useAppDispatch } from "./store";
 import { getCountries } from "./store/slices/countrySlice";
 import DetailsPage from "./pages/DetailsPage";
-
+import NotFoundPage from "./pages/NotFoundPage";
 
 const App: React.FC = () => {
-	const dispatch = useAppDispatch();
-	React.useEffect(() => {
-		dispatch(getCountries());
-	});
-
 	return (
 		<React.Fragment>
 			<Header />
@@ -21,7 +16,7 @@ const App: React.FC = () => {
 				<Routes>
 					<Route path="/" element={<HomePage />} />
 					<Route path="/country/:name" element={<DetailsPage />} />
-					{/* <Route path="*" element={<NotFound />} />  */}
+					<Route path="*" element={<NotFoundPage />} />
 				</Routes>
 			</Main>
 		</React.Fragment>
